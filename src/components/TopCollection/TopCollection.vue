@@ -40,7 +40,10 @@
                 <p>1 of 8</p>
               </div>
               <div class="secondColButton">
-                <button class="firstButton">Place a bid</button>
+                <button 
+                :class="[image.isActive ?
+                 'topCollection secondCol .secondColButton firstButton': 
+                 'topCollection secondCol secondColButton featureButton']">Place a bid</button>
               </div>
             </div>
           </div>
@@ -69,7 +72,7 @@
                 </p>
               </div>
               <div>
-                <p class="percentage">+{{ collection.percentage }}</p>
+                <p :class="[collection.isActive ? 'percentage': 'percentage2']">+{{ collection.percentage }}</p>
               </div>
               <hr>
             </div>
@@ -93,9 +96,9 @@ export default {
       icon: "https://i.ibb.co/K7j0v9x/verify-1.png",
       icon1: "https://i.ibb.co/h819ydL/ethereum-1.png",
       images: [
-        { img: "https://i.ibb.co/b1Kbqhh/unsplash-p-Vo-EPp-Lw818-1.png",id:1 },
-        { img: "https://i.ibb.co/GFFbLJ7/image-1-1.png",id:2 },
-        { img: "https://i.ibb.co/dtKtdJ2/unsplash-Lpby-DENb-QQg-1.png",id:3 },
+        { img: "https://i.ibb.co/b1Kbqhh/unsplash-p-Vo-EPp-Lw818-1.png",id:1,isActive:true },
+        { img: "https://i.ibb.co/GFFbLJ7/image-1-1.png",id:2,isActive:false },
+        { img: "https://i.ibb.co/dtKtdJ2/unsplash-Lpby-DENb-QQg-1.png",id:3,isActive:false },
       ],
       topCollections: [
         {
@@ -103,35 +106,35 @@ export default {
           id: 1,
           name: "CryptoFunks",
           count: 19769.39,
-          percentage: 26.52,
+          percentage: 26.52,isActive:false
         },
         {
           img: "https://i.ibb.co/kJ30Bz6/unsplash-f-T49-Qn-Fuc-Q8.png",
           id: 2,
           name: "Cryptix",
           count: 2769.39,
-          percentage: 10.52,
+          percentage: 10.52,isActive:true
         },
         {
           img: "https://i.ibb.co/n7Cv0R7/unsplash-Wj-IB-6-Ux-A5-Q.png",
           id: 3,
           name: "Frensware",
           count: 9232.39,
-          percentage: 2.52,
+          percentage: 2.52,isActive:true
         },
         {
           img: "https://i.ibb.co/V3Zq0Wf/unsplash-zk-NT5mik-Uuo.png",
           id: 4,
           name: "PunkArt",
           count: 3769.39,
-          percentage: 1.52,
+          percentage: 1.52,isActive:true
         },
         {
           img: "https://i.ibb.co/kJ30Bz6/unsplash-f-T49-Qn-Fuc-Q8.png",
           id: 5,
           name: "Art Crypto",
           count: 10769.39,
-          percentage: 2.52,
+          percentage: 2.52,isActive:false
         },
       ],
     };
@@ -209,10 +212,11 @@ export default {
   margin-left: 5px;
   margin-right: 5px;
 }
-.topCollection .secondCol .secondColButton button {
+.topCollection .secondCol .secondColButton .featureButton {
   margin-top: 10px;
   width: 113px;
   height: 40px;
+  padding: 15px;
   border: 1px solid #3d00b7;
   border-radius: 50px;
   color: #3d00b7;
@@ -221,6 +225,7 @@ export default {
   margin-top: 10px;
   width: 113px;
   height: 40px;
+  padding: 15px;
   background: #3d00b7;
   border-radius: 50px;
   border: none;
@@ -298,5 +303,14 @@ export default {
   text-align: right;
   letter-spacing: -0.025em;
   color: #14c8b0;
+}
+.percentage2{
+   font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  text-align: right;
+  letter-spacing: -0.025em;
+  color: red;
 }
 </style>

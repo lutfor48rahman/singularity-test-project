@@ -133,6 +133,10 @@ export default {
   line-height: 14px;
   color: #2639ed;
 }
+.collectionFeature .colFooter button:hover {
+  background: #2639ed;
+  color: white;
+}
 
 @media screen and(max-width:768px) {
   .collectionFeature .colDesign .firstImage img {

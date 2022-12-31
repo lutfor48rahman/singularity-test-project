@@ -79,6 +79,10 @@ export default {
   background: #ffffff;
   border: 1.09706px solid rgba(242, 242, 242, 0.5);
   border-radius: 13.1647px;
+  transition: 0.4s;
+}
+.discoverGallery .imageBox:hover {
+  transform: scale(1.1);
 }
 .discoverGallery .imageBox .images .mainImage {
   width: 100%;
