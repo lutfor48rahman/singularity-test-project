@@ -1,26 +1,44 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <Navbar/>
+  <ArtDiscoverVue/>
+  <AboutNFTVue/>
+  <TopCollection/>
+  <CollectionFeturesVue/>
+  <CreateSellVue/>
+  <MoreDiscoverVue/>
+  <FooterVue/>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import Navbar from './components/Navbar/Navbar.vue'
+import ArtDiscoverVue from './components/ArtDiscover.vue';
+import AboutNFTVue from './components/AboutNFT.vue';
+import TopCollection from './components/TopCollection/TopCollection.vue';
+import CollectionFeturesVue from './components/CollectionFetures/CollectionFetures.vue';
+import CreateSellVue from './components/CreateSell/CreateSell.vue';
+import MoreDiscoverVue from './components/MoreDiscover/MoreDiscover.vue';
+import FooterVue from './components/Footer/Footer.vue';
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Navbar,
+    ArtDiscoverVue,
+    AboutNFTVue,
+    TopCollection,
+    CollectionFeturesVue,
+    CreateSellVue,
+    MoreDiscoverVue,
+    FooterVue
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+ *{
+  margin: 0;
+  padding:0;
+ }
+ body{
+  overflow-x: hidden;
+ }
 </style>
